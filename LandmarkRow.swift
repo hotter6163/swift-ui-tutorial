@@ -28,16 +28,9 @@ struct LandmarkRow: View {
 }
 
 #Preview("GROUP") {
-    Group {
+    let landmarks = ModelData().landmarks
+    return Group {
         LandmarkRow(landmark: landmarks[0])
         LandmarkRow(landmark: landmarks[1])
     }
-}
-
-#Preview("Turtle Rock") {
-    LandmarkRow(landmark: landmarks[0])
-}
-
-#Preview("Salmon") {
-    LandmarkRow(landmark: landmarks[1])
 }
